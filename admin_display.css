@@ -1,0 +1,42 @@
+body{
+  background-color: #ededed;
+}
+
+.fieldname{
+  width: 97%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr .th{
+    font-family: Arial, Times, serif;
+    font-size: 120%;
+    background-color: coral;
+  }
+
+  tr:hover {background-color: coral;}
+  
+  h1,h2 {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 700px;
+    text-align: center;
+    color: #754739;
+  }
+  header{
+    padding: 20px;
+    text-align: center;
+    background: #66be8e;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
