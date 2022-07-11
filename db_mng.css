@@ -1,31 +1,3 @@
-/* select{
-    background:transparent;
-    width: 170px;
-    padding: 2px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:17px;
-    font-weight:600;
-    color:black;
-    line-height: 1;
-    border: 5;
-    border-radius: 50;
-    height: 22px;
-    
-}
-.select-div{
-  width: 170px;
-  height: 22px;
-  overflow: hidden;
-  }
-
-.choose{
-    width: 170px;
-    padding: 2px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:17px;
-    font-weight:600;
-    color:black;
-} */
 .select-div{
   width: 170px;
   height: 22px;
@@ -64,7 +36,7 @@ select{
   #sub{
     width: 100%;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     flex-direction: row;
     border: none;
@@ -86,7 +58,7 @@ select{
     text-decoration: underline;
 }
   #maim .function a{
-  background-color: #754739;
+  background-color: hwb(212 63% 5%);;
     color: #fff;
     width: 100%;
     padding: 5px;
@@ -114,7 +86,7 @@ select{
   width: 50px;
   height: 30px;
   border: 1px solid #c3c3c3;
-  background-color: #754739;
+  background-color: hwb(212 63% 5%);;
   color: #fff;
   width: 100%;
   padding: 5px;
@@ -130,7 +102,7 @@ select{
 }
 
 #sub-main div a:hover{
-  border-color: #754739;
+  border-color: hwb(212 63% 5%);;
   transition: .4s;
 }
   

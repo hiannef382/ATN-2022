@@ -20,21 +20,21 @@ table {
   tr .th{
     font-family: Arial, Times, serif;
     font-size: 120%;
-    background-color: coral;
+    background-color: hwb(212 63% 5%);
   }
 
-  tr:hover {background-color: coral;}
+  tr:hover {background-color: hwb(212 63% 5%);}
   
   h1,h2 {
     font-family: 'Pacifico', sans-serif;
     font-weight: 700px;
     text-align: center;
-    color: #754739;
+    color: hwb(212 63% 5%);
   }
   header{
     padding: 20px;
     text-align: center;
-    background: #66be8e;
+    background: hwb(212 0% 0%);;
     color: white;
     font-size: 30px;
     font-family: sans-serif;

@@ -10,7 +10,6 @@
 <body>
 <header>ATN Toy Company</header>
 <?php
-session_start();
 include("db_config.php");
 $dbconn = pg_connect($db_conn_string);
 if ($_SERVER["REQUEST_METHOD"]=="POST")
@@ -31,7 +30,6 @@ function display_table($query_object)
         echo "<table border=1>";
         echo "<tr>";
         $num_field = pg_num_fields($query_object);
-    
         for ($i=0;$i<$num_field;$i++){
             $field_name = pg_field_name($query_object,$i);
             // echo "<th class='th'>$field_name</th>";
@@ -49,7 +47,6 @@ function display_table($query_object)
         $num_row=pg_num_rows($query_object);
         for ($j=0;$j<$num_row;$j++){
             $row=pg_fetch_array($query_object,$j);
-    
             echo "<tr>";
             echo "<form action='' method='post'>";
             for ($i=0;$i<$num_field;$i++){
@@ -59,14 +56,12 @@ function display_table($query_object)
                     echo "<td><input class='fieldname' type='text' name=$field_name value=$field_value readonly></td>";
                 else
                     echo "<td><input class='fieldname' type='text' name=$field_name value=$field_value></td>";
-                
             }
             echo "<td><input type='submit' value='Edit' name='edit'></td>";
             echo "<td><input type='submit' value='Delete' name='delete'></td>";
             echo "</form>";
             echo "</tr>";
         }
-        
         echo "</table>";
     }
 ?>

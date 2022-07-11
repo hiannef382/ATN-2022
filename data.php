@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
         }
         $add_query=$add_query.")";
-        // echo $add_query;
+         echo $add_query;
         $add_result=pg_query($dbconn, $add_query);
     }
     if (isset($_POST['edit'])){
