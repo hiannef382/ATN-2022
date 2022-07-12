@@ -19,7 +19,7 @@ $product = pg_query($dbconn,$getProductQuery) or die('Query failed: ' . pg_last_
 $num_field = pg_num_fields($product);
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
     if (isset($_POST['insert'])){
-        $add_query="INSERT INTO product VALUES ('".$role."',";
+        $add_query="INSERT INTO product VALUES (";
         for ($i=0;$i<$num_field;$i++){
             $field_name = pg_field_name($product,$i);
             if($field_name!='role')
@@ -30,13 +30,13 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
                     $add_query=$add_query."'".$field_value."',"; 
                  }
                  else {
-                     $add_query=$add_query."'".$field_value."'";
+                    $add_query=$add_query."'".$field_value."'";
                  }
             }
         }
-        $add_query=rtrim($add_query, ",");
-        $add_query=$add_query.")";
-        echo $add_query;
+        //$add_query=rtrim($add_query, ",");
+        $add_query=$add_query."'".$role."')";
+        //echo $add_query;
         $add_result=pg_query($dbconn, $add_query);
         header("Location: db_mng.php");
     }
