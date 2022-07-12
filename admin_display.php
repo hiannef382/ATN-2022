@@ -16,7 +16,6 @@
     echo "<table border=1>";
     echo "<tr>";
     $num_field = pg_num_fields($query_object);
-
     for ($i=0;$i<$num_field;$i++){
         $field_name = pg_field_name($query_object,$i);
         // echo "<th class='th'>$field_name</th>";
